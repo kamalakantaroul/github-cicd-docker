@@ -1,5 +1,8 @@
-name: Java CI with Maven
-on: [push, pull_request]
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
 
 permissions:
   contents: read
@@ -23,5 +26,5 @@ jobs:
 
       - name: Update dependency graph
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}        # PAT   with repo scope
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}        # PAT  with repo scope
         uses: advanced-security/maven-dependency-submission-action@v1
