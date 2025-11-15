@@ -23,5 +23,5 @@ jobs:
 
       - name: Update dependency graph
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}        # PAT with repo scope
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}        # PAT  with repo scope
         uses: advanced-security/maven-dependency-submission-action@v1
